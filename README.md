@@ -166,11 +166,10 @@ Swap the positions of the "Semantics-Aware Method" section and the "Key Findings
 #### 2.
 (1) **poster made by using PosterGen:**
 ![alt text](README.assets/image-4.png)
-(2) **user's instruction: Replace the right-bottom section with section related to performance of close model**
+(2) **user's instruction: replace the right-bottom section with section related to testing on close models**
 
 (3) **Edited Poster:**
- ![alt text](README.assets/image.png)
-
+![alt text](README.assets/image-8.png)
 #### 3.
 (1) **poster made by using PosterGen:**
 ![alt text](README.assets/image-4.png)

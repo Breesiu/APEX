@@ -1,0 +1,44 @@
+# Core workflow (LLM + graphs)
+langgraph>=1.0.0,<2.0.0
+langchain>=1.0.0,<2.0.0
+langchain-core>=1.2.0,<2.0.0
+langchain-community>=0.4.0,<1.0.0
+langchain-openai>=1.0.0,<2.0.0
+langchain-google-genai>=4.0.0,<5.0.0
+langsmith>=0.4.0,<1.0.0
+
+# Model SDKs
+openai>=1.0.0,<2.0.0
+anthropic>=0.40.0,<1.0.0
+google-genai>=1.0.0,<2.0.0
+google-generativeai>=0.8.0,<1.0.0
+
+# Config / schema / utils
+pydantic>=2.0.0,<3.0.0
+pydantic-settings>=2.0.0,<3.0.0
+python-dotenv>=1.0.0,<2.0.0
+orjson>=3.9.0,<4.0.0
+json-repair>=0.30.0,<1.0.0
+tenacity>=8.0.0,<10.0.0
+requests>=2.31.0,<3.0.0
+httpx>=0.27.0,<1.0.0
+tqdm>=4.60.0,<5.0.0
+
+# PPTX editing / rendering
+python-pptx>=1.0.0,<2.0.0
+Pillow>=10.0.0,<12.0.0
+opencv-python>=4.10.0,<5.0.0
+
+# PDF parsing / asset extraction (used by tools/pdf_parser.py)
+PyPDF2>=3.0.0,<4.0.0
+PyMuPDF>=1.26.0,<2.0.0
+pdf2image>=1.17.0,<2.0.0
+docling>=2.0.0,<3.0.0
+marker-pdf>=1.0.0,<2.0.0
+beautifulsoup4>=4.12.0,<5.0.0
+lxml>=5.0.0,<7.0.0
+
+# Logging / CLI helpers
+rich>=13.0.0,<15.0.0
+colorlog>=6.0.0,<7.0.0
+typer>=0.9.0,<1.0.0

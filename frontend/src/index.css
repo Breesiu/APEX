@@ -1,0 +1,224 @@
+/* Modern Research Tool Theme */
+:root {
+  --bg-app: #F3F6F8; /* Light blue-grey */
+  --bg-card: #FFFFFF;
+  --bg-input: #F8FAFC;
+  --color-primary: #0F172A; /* Slate 900 */
+  --color-secondary: #64748B; /* Slate 500 */
+  --color-accent: #2563EB; /* Blue 600 */
+  --color-accent-hover: #1D4ED8;
+  --border-color: #E2E8F0;
+  --border-focus: #3B82F6;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: var(--bg-app);
+  color: var(--color-primary);
+  line-height: 1.5;
+  height: 100vh;
+  /* Allow scroll only if content doesn't fit (zoomed in or small screen) */
+  overflow-y: auto; 
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 95vw;
+  max-width: 1920px;
+  margin: 0 auto;
+  /* 减小上下 padding，从 16px 减至 8px */
+  padding: 8px 24px;
+  display: flex;
+  flex-direction: column;
+  
+  /* 将 height 从 100vh 改为 100%，配合 body 的 100vh 
+     并确保加上 box-sizing 避免 padding 导致溢出 
+  */
+  height: 100%;
+  min-height: 720px; /* 稍微调低保底高度 */
+  
+  box-sizing: border-box;
+  gap: 16px; /* 减小各组件间的间距 */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 0;
+  /* 修改背景颜色: Change #e1efff to any color (e.g., #ffffff, #000000, or a gradient) */
+  background: #dbe9f8;
+  border: 1px solid #d9e2ec;
+  border-radius: var(--radius-lg);
+  
+  /* 修改高度: 标题栏的高度目前通过内边距(padding)撑开。
+     你可以修改 32px (上下) 或 40px (左右) 
+     也可以直接添加 height: 200px; 来固定高度 
+  */
+  padding: 18px 40px;
+  
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(91, 115, 141, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Removed custom glow to match original flat/clean style */
+.header::before {
+  display: none;
+}
+
+.header h1 {
+  /* 修改字体大小: Change 2.6rem to other values (e.g. 3rem or 40px) */
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  
+  /* Original Gradient Text Style */
+  /* 修改字体颜色 (渐变色): Modify the hex codes below (#6aa8ff start, #3d6dce end) */
+  /* 若要改为纯色: 删除下面 background 和 clip 属性, 并设置 color: #your-color; */
+  background: linear-gradient(135deg, #1144a9 0%, #3a68c4 15%, #4d84d1 50%, #5c93e0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  
+  position: relative;
+  letter-spacing: .5px;
+  /* 修改字体类型: Change the font stack below */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  text-shadow: none;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* POSTER PREVIEW 与 POSTER EDIT 两个卡片的共有样式 */
+.main-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 24px;
+  
+  /* 在这里修改两个区域的高度:
+     1. height: 100% 表示填满父容器剩余空间
+     2. min-height: 550px 保证在页面缩小时不会被压缩得太小
+  */
+  height: 600px;
+  min-height: 500px; 
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+}
+
+.button {
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.button:hover:not(:disabled) {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}
+
+.button:disabled {
+  background-color: #CBD5E1;
+  color: #64748B;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+textarea {
+  background-color: var(--bg-input) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-md) !important;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: 'Segoe UI', monospace; /* Code-like feel for instructions */
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--border-focus) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+  background-color: #FFFFFF !important;
+}
+
+.log-line {
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+  font-size: 12px;
+  padding: 4px 0;
+  color: #334155;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.preview-container {
+  background-color: var(--bg-app); /* 改为页面底色 */
+  border: 2px dashed #CBD5E1;
+  border-radius: var(--radius-md);
+  transition: all 0.2s;
+}
+
+.preview-container.elevated {
+  border-style: solid;
+  border-color: #E2E8F0;
+  
+  /* 修改这里: 将默认的白色 #FFFFFF 改为你想要的颜色 
+     例如 var(--bg-app) 即页面底色
+  */
+  background-color: var(--bg-app); 
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8; 
+}
+    --border-soft: #e1e5e9;
+    --code-bg: #f8fafc;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}

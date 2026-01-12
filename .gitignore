@@ -1,0 +1,16 @@
+*.png
+# outputs/
+*.pyc
+# *.pptx
+# *.md
+# *.html
+# *.txt
+# *.pdf
+# *.log
+# *.jsonl
+# *.json
+# baseline*
+# instruction.json
+APEX-Bench/
+src/__pycache__/*
+uploads/*

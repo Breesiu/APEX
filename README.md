@@ -63,6 +63,12 @@ APEX provides an end-to-end workflow to **edit** an existing academic poster (PP
 
 ---
 
+  <blockquote>
+    <b>Note:</b> If you want to experience the full pipeline from <b>poster generation</b> to <b>automated editing</b>, please refer to the <a href="generation_edit/README.md">generation_edit</a> folder. We highly recommend using <a href="https://github.com/Y-Research-SBU/PosterGen">PosterGen</a> (specifically with GLM or Gemini models) to generate a base poster before using APEX for refinement.
+  </blockquote>
+  
+---
+
 ## System Requirements
 
 - **OS**: Windows, Linux 
@@ -166,10 +172,11 @@ Swap the positions of the "Semantics-Aware Method" section and the "Key Findings
 #### 2.
 (1) **poster made by using PosterGen:**
 ![alt text](README.assets/image-4.png)
-(2) **user's instruction: replace the right-bottom section with section related to testing on close models**
+(2) **user's instruction: Replace the right-bottom section with section related to performance of close model**
 
 (3) **Edited Poster:**
-![alt text](README.assets/image-8.png)
+ ![alt text](README.assets/image.png)
+
 #### 3.
 (1) **poster made by using PosterGen:**
 ![alt text](README.assets/image-4.png)
@@ -194,7 +201,7 @@ This project relies on the open-source ecosystem, including (but not limited to)
 - LangGraph / LangChain for multi-agent workflows
 - python-pptx for PPTX manipulation
 - Docling for PDF parsing and asset extraction
-- PosterGen for poster generation
+- [PosterGen](https://github.com/Y-Research-SBU/PosterGen) for poster generation
 
 ### Citation
 ```bash
